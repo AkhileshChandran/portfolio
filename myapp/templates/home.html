@@ -1,0 +1,439 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhilesh_Chandrn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/myapp/css/style.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="{% static 'myapp/js/style.js' %}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-eNOIuyjg7Bw6CbnWz82dLEefMwT7PHFQVDFJqU1R3Qg7Ekaw0jHbMQ2USQ3d4eD2" crossorigin="anonymous">
+
+    <script>
+        function scrollToAbout() {
+            document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <style>
+         
+        /* Style for the download button */
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            /* Button background color */
+            color: black;
+            /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            margin-left: 60px;
+            transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+
+        /* Hover effect for the button */
+        .download-btn:hover {
+            background-color: #eee;
+            /* Lighter background color on hover */
+            transform: scale(1.1); /* Apply a scale transformation on hover */
+        }
+
+        /* Responsive design for the button */
+        @media only screen and (max-width: 600px) {
+            .download-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .ab{
+          transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+        .ab:hover{
+          transform: scale(1.1); /* Apply a scale transformation on hover */
+        }
+        .container1{
+          transition: transform 0.3s;
+
+        }
+        .container1:hover{
+          transform: scale(1.1);}
+
+        
+        .myimg{
+          transition: transform 0.3s;
+        }
+
+
+        .myimg:hover{
+    transform: scale(1.1);
+}
+
+
+        
+    </style>
+    
+</head>
+<body>
+  
+<!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-black">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light fs-3 " href="{% url 'Home' %}" style="font-weight: bold;">Akhilesh</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light fs-5 your-element ab" aria-current="page" href="{% url 'Home' %}">Home</a>
+              </li>
+<li class="nav-item">
+    <a class="nav-link text-light fs-5 your-element ab" href="javascript:void(0);" onclick="scrollToAbout()">About</a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link active text-light fs-5 your-element ab" aria-current="page" href="#projects">Projects</a>
+</li>
+
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5 your-element nav-item-contact ab" href="#" onclick="scrollToFooterSection()">Contact</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="namesection">
+        <h4 class="name">Hello,it's Me</h1>
+        <h1 class="name">Akhilesh Chandran</h1>
+        <h4 class="name"> I am a full-stack developer,</h4>
+        <h4 class="name">with skills in <span class="text"></span></h1>
+      </div>
+      <a href="{% url 'download_file' %}" download class="download-btn  " style="margin-left: 4%;">
+        Download Resume
+    </a>
+
+      <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                strings: ['Python','Django','HTML','CSS','Bootstrap','React','MySQL'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true
+            };
+
+            var typed = new Typed('.text', options);
+        });
+      </script> -->
+
+
+      <!-- image_section -->
+
+
+      <div class="imagesection">
+        <img class="myimg" src="{% static 'myapp/images/Akhilesh.png' %}" alt="">
+        <!-- <div class="content">
+            <p style="padding-top: 60px">Hi myself Akhilesh Chandran.As a recent graduate with a degree in b-tech computer science, I am eager to kickstart mycareer as a Full-stack Web Developer, specializing in Python Django and React. My academic background, coupled with hands-on projects and internships, has equipped mewith a strong foundation in web development, and I am enthusiastic about applying myskills to contribute to innovative and dynamic projects.</p>
+        </div> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<!-- aboutme_section -->
+
+    <div class="container" style="cursor: pointer;">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="about ab" id="about-me">
+        <h1 class="animate-me your-element" style="color: white; text-align: center; font-weight: bolder; font-size: 50px;">About Me</h1>
+        <p class="animate-me" style="color: white;">Hello, I'm Akhilesh Chandran, a passionate and versatile Full Stack Developer. With a strong foundation in both front-end and back-end technologies, I bring creativity, problem-solving skills, and a dedication to delivering high-quality software solutions.
+            I hold a B-tech Degree from Kerala Technological Univeristy, where I honed my skills in software development and gained a solid understanding of computer science principles. I am dedicated to continuous learning and staying updated on emerging technologies.
+            I am always open to new opportunities, collaborations, and conversations. Feel free to reach out to me at akhileshchandran257@gmail.com, and let's connect on www.linkedin.com/in/akhilesh-chandran-a4aa602b0 .
+            Thank you for visiting my portfolio. I look forward to discussing how my skills and experiences can contribute to your next project!
+        </div>
+    </div>
+
+<!-- Skills_Section -->
+
+    <div class=" ab col-md-4 animate-me ab">
+        <div class="skills">
+            <div class="label">
+                <label class="your-element ltex animate-me" for="">Skills</label>
+                <!-- List of skills -->
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>javascript</li>
+                    <li>REACT</li>
+                    <li>MySQL</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+
+<style>
+
+  form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+      color: white;
+  }
+
+  form label {
+      display: block;
+      margin-bottom: 8px;
+  }
+
+  form input,
+  form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      background-color: #444;
+      color: white;
+  }
+
+  form button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  form button:hover {
+      background-color: #218838;
+  }
+</style>
+
+<style>
+  .card {
+      background-color: black;
+      color: white;
+  }
+  
+
+
+form button {
+  padding: 10px 20px;
+  background-color: white;
+  color: black; /* Set the text color to black */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+form button:hover {
+  background-color: #eee;
+  /* Lighter background color on hover */
+  transform: scale(1.1);
+}
+</style>
+<style>
+.card {
+margin-right: 20px; /* Add margin to the right of each card */
+}
+
+.card:last-child {
+margin-right: 0; /* Remove margin from the last card */
+}
+</style>
+<style>
+.card {
+transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.card:hover {
+transform: scale(1.1); /* Apply a scale transformation on hover */
+}
+</style>
+
+<label class="your-element ab animate-me" for="" style="color: white; font-size: xx-large; font-weight: bold;margin-left: 40%;">My Projects</label>
+
+<br>
+<br>
+<br>
+<div id="projects" class="projects animate-me">
+<div class="card-group">
+    <div class="card">
+        <img src="{% static 'myapp/images/Django.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5%;">
+        <div class="card-body">
+            <h5 class="card-title">Job Seeker Website</h5>
+            <p class="card-text">Website for seeking job profiles and listing jobs.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'myapp/images/python.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5%;">
+        <div class="card-body">
+            <h5 class="card-title">Voice Based E-mail System for Visually Impaired Persons</h5>
+            <p class="card-text">A web-based platform that enables visually impaired individuals to access email services.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'myapp/images/HTML.jpg' %}" class="card-img-top" alt="..." style="border-radius: 5%;">
+        <div class="card-body">
+            <h5 class="card-title">Hospital Management System</h5>
+            <p class="card-text">A comprehensive web-based platform designed to streamline and enhance the efficiency of healthcare facilities.</p>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+      // Smooth scrolling to the projects section
+      $("a[href^='#']").on('click', function(event) {
+          event.preventDefault();
+
+          var target = this.hash;
+          var $target = $(target);
+
+          $('html, body').stop().animate({
+              'scrollTop': $target.offset().top
+          }, 800, 'swing', function() {
+              window.location.hash = target;
+          });
+      });
+  });
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- forms_section -->
+<label class="animate-me ab your-element" style="color: white; font-size:x-large; margin-left: 40%;" >Share your thoughts with me</label>
+<br>
+
+<form method="post" action="{% url 'review_page' %}" class="hidden">
+    {% csrf_token %}
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" id="id_name" required>
+
+    <label for="id_email">Email (optional):</label>
+    <input type="email" name="email" id="id_email">
+
+    <label for="id_review">Review:</label>
+    <textarea name="review" id="id_review" rows="4" required></textarea>
+
+    <button type="submit">Submit Review</button>
+</form>
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer-section">
+   
+<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+        <span>Get connected with me:</span>
+    </div>
+    
+    </div>
+</section>
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+                    </h6>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Social Networks
+            </h6>
+            <p>
+              <a href="https://mail.google.com/" class="text-reset">Gmail</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/akhilesh-chandran-a4aa602b0/" class="text-reset">linkedin</a>
+            </p>
+            <p>
+              <a href="https://github.com/AkhileshChandran" class="text-reset">Github</a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/akhilesh.chandran.1654" class="text-reset">Facebook</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Kochi,Kerala,India</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+             akhileshchandran257@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> 7306107912</p>
+            <p><i class="fas fa-print me-3"></i> 7034533847</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">Akhilesh Chandran</a>
+    </div>
+    <!-- Copyright -->
+    
+  </footer>
+  <!-- // Automatic scrolling to the footer when the "Contact" link is clicked -->
+  <script>
+    function scrollToFooterSection() {
+        var targetSection = document.getElementById('footer-section');
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
+
+        </body>
+        </html>
